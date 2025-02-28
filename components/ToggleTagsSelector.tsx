@@ -123,7 +123,7 @@ export default function ToggleTagsSelector({
     <div className="space-y-4">
       <div className="space-y-2">
         <h4 className="text-sm font-medium">Activity Preferences</h4>
-        <div className="flex flex-wrap gap-2">
+        <div className="flex flex-wrap gap-2 items-center justify-center">
           {allTags.map((tag) => (
             <div key={tag} className="flex items-center">
               <Badge

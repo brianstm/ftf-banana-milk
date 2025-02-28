@@ -12,6 +12,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
+import { Banana } from "lucide-react";
 
 export default function Home() {
   const router = useRouter();
@@ -22,7 +23,7 @@ export default function Home() {
 
   const createLobby = async () => {
     try {
-      const response = await fetch("/api/create-lobby", {
+      const response = await fetch("http://localhost:8080/api/create-lobby", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -53,7 +54,9 @@ export default function Home() {
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen p-4">
-      <h1 className="text-4xl font-bold mb-8">Interest Matcher</h1>
+      <h1 className="text-4xl font-bold mb-8 flex gap-2 items-center">
+        <Banana className="w-8 h-8" /> BananaTrail
+      </h1>
       <div className="w-full max-w-md space-y-4">
         <Dialog open={isOpen} onOpenChange={setIsOpen}>
           <DialogTrigger asChild>

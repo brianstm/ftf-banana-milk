@@ -29,7 +29,7 @@ export default function Onboarding() {
     }
 
     try {
-      const response = await fetch("/api/join-lobby", {
+      const response = await fetch("http://localhost:8080/api/join-lobby", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
